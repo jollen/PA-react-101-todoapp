@@ -1,6 +1,6 @@
 {
-  "name": "react-babel-starter",
-  "version": "0.0.1",
+  "name": "PA-react-101-todoapp",
+  "version": "0.0.2",
   "description": "React.js starter kit with Babel and Gulpfile.",
   "main": "server.js",
   "dependencies": {
@@ -16,8 +16,10 @@
     "gulp-babel": "^6.1.2",
     "gulp-browserify": "^0.5.1",
     "gulp-react": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "run-sequence": "^1.2.1"
   },
   "scripts": {
     "start": "node server.js"

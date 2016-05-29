@@ -26,6 +26,7 @@ var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var react = require('gulp-react');
 var browserify = require('gulp-browserify');
+var runSequence = require('run-sequence');
 
 // Convert JSX and compile ES2015 to JavaScript
 gulp.task('build', function () {
@@ -55,10 +56,15 @@ gulp.task('todo', function () {
       .pipe(gulp.dest('dist'));
 });
 
+gulp.task('compile', function(done) {
+    runSequence('build', 'browserify', 'todo', function() {
+        done();
+    });
+});
+
 // Watch Files For Changes
 gulp.task('watch', function () {
-    gulp.watch(['src/**/*.jsx'], ['build']);
-    gulp.watch(['src/**/*.js'], ['todo']);
+    gulp.watch(['src/**/*.jsx'], ['compile']);
 });
 
 // Default Task
