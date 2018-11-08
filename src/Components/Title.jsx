@@ -9,25 +9,16 @@ export class Title extends Component {
         };
     }
 
-    tick() {
-        this.setState({
-            data: this.state.data + 1
-        });
-    }
-
     componentWillUnmount() {
-        clearInterval(this.interval);
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.tick.bind(this), 1000);
     }
 
     render() {
         return (
             <div>
-                <h1>{this.props.text} by {this.props.author}</h1>
-                <h2>{this.state.data}</h2>
+                <i>{this.props.text}{this.props.temperature}</i>
             </div>
         );
     }

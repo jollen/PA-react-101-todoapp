@@ -27,7 +27,7 @@ var TodoApp = exports.TodoApp = function (_Component) {
     function TodoApp(props, context) {
         _classCallCheck(this, TodoApp);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TodoApp).call(this, props, context));
+        var _this = _possibleConstructorReturn(this, (TodoApp.__proto__ || Object.getPrototypeOf(TodoApp)).call(this, props, context));
 
         _this.state = {
             text: ''

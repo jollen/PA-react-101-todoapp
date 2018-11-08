@@ -25,7 +25,7 @@ var TodoList = exports.TodoList = function (_Component) {
     function TodoList(props, context) {
         _classCallCheck(this, TodoList);
 
-        return _possibleConstructorReturn(this, Object.getPrototypeOf(TodoList).call(this, props, context));
+        return _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).call(this, props, context));
     }
 
     _createClass(TodoList, [{

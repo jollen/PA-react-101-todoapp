@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Title = undefined;
+exports.Table = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -19,13 +19,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Title = exports.Title = function (_Component) {
-    _inherits(Title, _Component);
+var Table = exports.Table = function (_Component) {
+    _inherits(Table, _Component);
 
-    function Title(props, context) {
-        _classCallCheck(this, Title);
+    function Table(props, context) {
+        _classCallCheck(this, Table);
 
-        var _this = _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).call(this, props, context));
+        var _this = _possibleConstructorReturn(this, (Table.__proto__ || Object.getPrototypeOf(Table)).call(this, props, context));
 
         _this.state = {
             data: 0
@@ -33,7 +33,7 @@ var Title = exports.Title = function (_Component) {
         return _this;
     }
 
-    _createClass(Title, [{
+    _createClass(Table, [{
         key: "componentWillUnmount",
         value: function componentWillUnmount() {}
     }, {
@@ -42,15 +42,17 @@ var Title = exports.Title = function (_Component) {
     }, {
         key: "render",
         value: function render() {
-            return _react2.default.createElement("div", null, _react2.default.createElement("i", null, this.props.text, this.props.temperature));
+            return _react2.default.createElement("div", null, _react2.default.createElement("table", null, _react2.default.createElement("tbody", null, this.props.history.map(function (data) {
+                return _react2.default.createElement("tr", null, _react2.default.createElement("td", null, data.temperature));
+            }))));
         }
     }]);
 
-    return Title;
+    return Table;
 }(_react.Component);
 
-Title.defaultProps = {
+Table.defaultProps = {
     text: 'Hello',
     author: 'React'
 };
-//# sourceMappingURL=Title.js.map
+//# sourceMappingURL=Table.js.map
